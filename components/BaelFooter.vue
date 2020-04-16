@@ -48,31 +48,32 @@
 
             </div>
         </div>
-        <div class="xs-text-left xs-p2 xs-border" :class="signupAboutSize">
-            <div class="item">
-                <div v-show="connectData" class="footer__heading xs-mb2">Connect</div>
-                <ul class="list-unstyled">
-                    <li v-show="connectData" v-for="(c,i) in connectData" :key="i">
-                        <a :href="c.url">{{c.name}}</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="xs-text-left xs-p2 xs-border" :class="signupAboutSize">
-            <div class="item">
-                <div class="footer__heading xs-mb2">Deploy</div>
+      <div class="xs-text-left xs-p2 xs-border" :class="signupAboutSize">
+        <div class="item">
+          <div class="footer__heading xs-mb2">Контакти</div>
 
-                <a href="https://app.netlify.com/start/deploy?repository=https://github.com/jake-101/bael-template">
-            <img style="height:29px;width:auto;" src="~/assets/deploy.svg" title="Deploy to Netlify">
-          </a>
-
-            </div>
+          <a
+            href="https://app.netlify.com/start/deploy?repository=https://github.com/jake-101/bael-template"
+          >Обади се</a>
         </div>
-        <div class="c-12 xs-text-left xs-p2 xs-border">
-            <div class="item xs-text-6"><a href="https://github.com/jake-101/bael-template">Bael</a>, An open source design by
-                <a href="https://jake101.com">jake101</a>
-            </div>
+      </div>
+      <div class="xs-text-left xs-border" style="padding:0" :class="signupAboutSize">
+        <div class="item">
+          <div style="width: 100%;height:100%">
+            <iframe
+              width="100%"
+              height="300"
+              src="https://maps.google.com/maps?width=100%&amp;height=600&amp;hl=en&amp;q=%D1%83%D0%BB.%20%D0%92%D0%B0%D1%81%D0%B8%D0%BB%20%D0%9A%D0%BE%D0%BB%D0%B0%D1%80%D0%BE%D0%B2%2012%203320%202%D0%B0%2C%20%D0%9A%D0%BE%D0%B7%D0%BB%D0%BE%D0%B4%D1%83%D0%B9%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F+()&amp;ie=UTF8&amp;t=&amp;z=18&amp;iwloc=B&amp;output=embed"
+              frameborder="0"
+              scrolling="no"
+              marginheight="0"
+              marginwidth="0"
+            >
+              <a href="https://www.maps.ie/draw-radius-circle-map/">km radius map</a>
+            </iframe>
+          </div>
         </div>
+      </div>
     </div>
 </footer>
 </template>

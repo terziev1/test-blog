@@ -1,21 +1,23 @@
 <template>
+  <div>
+    <div class="snimka"></div>
 
-    <component :is="getLayout" :allitems="allBlogPosts"></component>
+    <component :is="getLayout" :allitems="allCategories"></component>
+  </div>
 </template>
 
 <script>
 import BaelGrid from "~/components/BaelGrid";
 import FullGrid from "~/components/FullGrid";
 export default {
-    watchQuery: ['page'],
+  watchQuery: ["page"],
 
-   transition (to, from) {
-     
-    if (!from) return 'fade'
-    return +to.query.page > +from.query.page ? 'slide-right' : 'slide-left'
+  transition(to, from) {
+    if (!from) return "fade";
+    return +to.query.page > +from.query.page ? "slide-right" : "slide-left";
   },
   name: "Index",
-  components: { BaelGrid,FullGrid },
+  components: { BaelGrid, FullGrid },
   data() {
     return {};
   },
@@ -25,20 +27,21 @@ export default {
     allBlogPosts() {
       return this.$store.state.blogPosts;
     },
+    allCategories() {
+      return this.$store.state.allCats;
+    },
     getLayout() {
-if (this.$store.state.siteInfo.altlayout == false ) {
-  return 'BaelGrid'
-} else if (this.$store.state.siteInfo.altlayout == true ) {
-  return 'FullGrid'
-}
-
+      if (this.$store.state.siteInfo.altlayout == false) {
+        return "BaelGrid";
+      } else if (this.$store.state.siteInfo.altlayout == true) {
+        return "FullGrid";
+      }
     }
   }
 };
 </script>
 
 <style>
-
 .browse a {
   width: 100%;
 }
@@ -65,5 +68,12 @@ nav .r {
   .xs-visible {
     visibility: visible;
   }
+}
+.snimka {
+  width: 100%;
+  height: 80vh;
+  background: url("../assets/doves.jpg") no-repeat center center;
+  background-color: black;
+  background-size: contain;
 }
 </style>

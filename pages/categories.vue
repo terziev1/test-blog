@@ -1,5 +1,9 @@
 <template>
+<div>
+  <div class="snimka"></div>
   <BaelGrid :allitems="allCategories"></BaelGrid>
+
+</div>
 </template>
 
 <script>
@@ -8,10 +12,10 @@ export default {
     watchQuery: ['page'],
 
    async asyncData({ params, app, payload, route, store }) {
- 
+
     await store.commit("SET_TITLE", "Categories");
 
-  
+
   },
      transition (to, from) {
     if (!from) return 'fade'
@@ -30,7 +34,7 @@ export default {
    allCategories() {
     return this.$store.state.allCats
    }
-   
+
   }
 };
 </script>
@@ -62,5 +66,10 @@ nav .r {
   .xs-visible {
     visibility: visible;
   }
+}
+.snimka{
+  width:100%;
+  height:80vh;
+  background-color:black;
 }
 </style>

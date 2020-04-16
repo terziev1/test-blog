@@ -71,7 +71,7 @@ export default {
       var height = document.getElementById("navbar").clientHeight;
       console.log(height);
       this.$store.commit("SET_NAVHEIGHT", height - 1);
- 
+
     }
   },
 
@@ -105,10 +105,11 @@ nav {
 }
 .sitename {
   color: #000;
-  font-family: "Archivo Black", sans-serif;
+font-family: 'Gabriela', serif;
   text-transform: uppercase;
   font-weight: 400;
   font-size: 18px;
+  letter-spacing:4px;
 }
 @media only screen and (max-width: 40rem) {
   .results {

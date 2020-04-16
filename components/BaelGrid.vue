@@ -14,7 +14,7 @@
     <div v-else class="r full-height browse">
       <div class="xs-p2 c-100 xs-flex xs-flex-align-center xs-flex-justify-center xs-text-center" :style="`height:calc(100vh - ${navbarheight}px);margin-top:${navbarheight}px`">
 
-        
+
         <div v-if="total < 1 && !busy">No Results.</div>
       </div>
 
@@ -53,7 +53,7 @@ export default {
       if (this.total > this.count && this.busy == false) {
         this.busy = true;
 
-     
+
           this.items2.splice(0);
           for (var i = 0, j = 12; i < j; i++) {
             let api = this.allitems[this.count];
@@ -63,7 +63,7 @@ export default {
           }
 
           this.busy = false;
-        
+
       }
     },
 
