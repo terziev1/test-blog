@@ -2,8 +2,8 @@
   "sitename": "Елит Пун4еви",
   "sitedescription": "Погребална агенция",
   "siteicon": "/images/uploads/icon.png",
-  "showmenu": true,
+  "showmenu": false,
   "emailsignup": false,
-  "altlayout": true,
+  "altlayout": false,
   "menu": []
 }
