@@ -86,7 +86,10 @@ env: {
 middleware: ['title']
  },
   generate: {
-    routes: dynamicRoutes
+    routes: dynamicRoutes,
+    minify: {
+      collapseWhitespace: false
+    }
   },
   plugins: ['~/plugins/vuefuse',{
     src: "~/plugins/moment",
