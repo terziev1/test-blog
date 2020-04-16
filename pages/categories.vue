@@ -1,40 +1,35 @@
 <template>
-<div>
-  <div class="snimka"></div>
-  <BaelGrid :allitems="allCategories"></BaelGrid>
-
-</div>
+  <div>
+    <div class="snimka"></div>
+    <BaelGrid :allitems="allCategories"></BaelGrid>
+  </div>
 </template>
 
 <script>
-import BaelGrid from '~/components/BaelGrid'
+import BaelGrid from "~/components/BaelGrid";
 export default {
-    watchQuery: ['page'],
+  watchQuery: ["page"],
 
-   async asyncData({ params, app, payload, route, store }) {
-
+  async asyncData({ params, app, payload, route, store }) {
     await store.commit("SET_TITLE", "Categories");
-
-
   },
-     transition (to, from) {
-    if (!from) return 'fade'
-    return +to.query.page > +from.query.page ? 'slide-right' : 'slide-left'
+  transition(to, from) {
+    if (!from) return "fade";
+    return +to.query.page > +from.query.page ? "slide-right" : "slide-left";
   },
-  components: {BaelGrid},
+  components: { BaelGrid },
   data() {
     return {};
   },
-     head() {
+  head() {
     return {
       title: "Categories | " + this.$store.state.siteInfo.sitename
     };
   },
   computed: {
-   allCategories() {
-    return this.$store.state.allCats
-   }
-
+    allCategories() {
+      return this.$store.state.allCats;
+    }
   }
 };
 </script>
@@ -67,9 +62,9 @@ nav .r {
     visibility: visible;
   }
 }
-.snimka{
-  width:100%;
-  height:80vh;
-  background-color:black;
+.snimka {
+  width: 100%;
+  height: 80vh;
+  background-color: black;
 }
 </style>

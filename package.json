@@ -35,8 +35,5 @@
     "eslint-loader": "^1.7.1",
     "eslint-plugin-vue": "^4.7.0",
     "glob": "^7.1.2"
-  },
-  "engines": {
-    "node": "^12.14.0"
   }
 }
