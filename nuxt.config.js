@@ -96,7 +96,6 @@ middleware: ['title']
     ssr: false
   },{
     src: "~/plugins/lazyload",
-    ssr: false
   }],
   /*
   ** Build configuration
