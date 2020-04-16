@@ -2,7 +2,7 @@
   <div>
     <div class="snimka"></div>
 
-    <component :is="getLayout" :allitems="allCategories"></component>
+    <component :is="getLayout" :allitems="allBlogPosts"></component>
   </div>
 </template>
 
